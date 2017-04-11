@@ -1,1 +1,69 @@
 example@form page
+
+
+<%= form_for JobApplication.new do |f| %>
+<div class="field">
+  <%= f.label :full_name %>
+  <%= f.text_field :full_name %>
+</div>
+<div class="field">
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+</div>
+<div class="field">
+  <%= f.label :hobby %>
+  <%= f.text_field :hobby %>
+</div>
+<div class="field">
+  <%= f.label :years_experience %>
+  <%= f.text_field :years_experience %>
+</div>
+<div class="field">
+  <%= f.label :available_date %>
+  <%= f.text_field :available_date %>
+</div>
+
+
+<div class="field">
+  <%= form_builder.submit %>
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+<form class="new_job_application" id="new_job_application" action="/job_applications" accept-charset="UTF-8" method="post">
+  <p>
+    <label for="job_application_full_name">Full name</label>
+    <input type="text" name="job_application[full_name]" id="job_application_full_name" />
+  </p>
+
+  <p>
+    <label for="job_application_phone">Phone</label>
+    <input type="tel" name="job_application[phone]" id="job_application_phone" />
+  </p>
+
+  <p>
+    <label for="job_application_hobby">Hobby</label>
+    <input type="text" name="job_application[hobby]" id="job_application_hobby" />
+  </p>
+
+  <p>
+    <label for="job_application_years_experience">Years experience</label>
+    <input type="number" name="job_application[years_experience]" id="job_application_years_experience" />
+  </p>
+
+  <p>
+    <label for="job_application_available_date">Available date</label>
+    <input type="date" name="job_application[available_date]" id="job_application_available_date" />
+  </p>
+
+  <p>
+    <input type="submit" name="commit" value="Create Job application" />
+  </p>
+</form>
